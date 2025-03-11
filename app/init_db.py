@@ -12,6 +12,15 @@ Base.metadata.create_all(bind=engine)
 
 # Insert dummy data
 def add_dummy_data():
+    """Adds dummy flight data to the database.
+    
+    Creates a set of predefined Flight records with details such as flight number, scheduled
+    departure and arrival times, departure and arrival airports, flight status, aircraft code, 
+    and airline name. The new entries are added to a database session, committed, and the session closed.
+    
+    Note:
+    Each flight record includes the 'airlines_name' field, which specifies the operating airline.
+    """
     db = SessionLocal()
     dummy_flights = [
         Flight(
