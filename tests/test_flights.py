@@ -22,5 +22,8 @@ def test_read_flights(setup_database):
     assert response.status_code == 200
     assert len(response.json()) == 3
     assert response.json()[0]["flight_no"] == "AA123"
+    assert response.json()[0]["airlines_name"] == "American Airlines"  # New field
     assert response.json()[1]["flight_no"] == "BA456"
+    assert response.json()[1]["airlines_name"] == "British Airways"  # New field
     assert response.json()[2]["flight_no"] == "CA789"
+    assert response.json()[2]["airlines_name"] == "China Airlines"  # New field
