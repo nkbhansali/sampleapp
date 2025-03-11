@@ -14,3 +14,4 @@ class Flight(Base):
     arrival_airport = Column(String, nullable=False)
     status = Column(String, nullable=False)
     aircraft_code = Column(String, nullable=False)
+    airlines_name = Column(String, nullable=False)  # New field

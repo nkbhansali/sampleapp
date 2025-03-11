@@ -10,6 +10,7 @@ class Flight(BaseModel):
     arrival_airport: str
     status: str
     aircraft_code: str
+    airlines_name: str  # New field
 
     class Config:
         orm_mode = True

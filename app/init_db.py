@@ -21,7 +21,8 @@ def add_dummy_data():
             departure_airport="JFK",
             arrival_airport="LAX",
             status="On Time",
-            aircraft_code="A320"
+            aircraft_code="A320",
+            airlines_name="American Airlines"  # New field
         ),
         Flight(
             flight_no="BA456",
@@ -30,7 +31,8 @@ def add_dummy_data():
             departure_airport="LHR",
             arrival_airport="JFK",
             status="Delayed",
-            aircraft_code="B747"
+            aircraft_code="B747",
+            airlines_name="British Airways"  # New field
         ),
         Flight(
             flight_no="CA789",
@@ -39,7 +41,8 @@ def add_dummy_data():
             departure_airport="PEK",
             arrival_airport="SFO",
             status="Cancelled",
-            aircraft_code="B777"
+            aircraft_code="B777",
+            airlines_name="China Airlines"  # New field
         )
     ]
     db.add_all(dummy_flights)
